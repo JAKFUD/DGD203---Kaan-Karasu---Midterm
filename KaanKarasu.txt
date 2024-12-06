@@ -1,0 +1,68 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Welcome to the 'Would You Rather' game!");
+        Console.Write("Please enter your name: ");
+        string playerName = Console.ReadLine();
+
+        Console.WriteLine($"\nHello, {playerName}! Let's get started with some questions.");
+
+        int score = 0;
+
+        // Question 1
+        Console.WriteLine("\nQuestion 1: Would you rather...");
+        Console.WriteLine("A) Travel to the past");
+        Console.WriteLine("B) Travel to the future");
+        Console.Write("Your choice (A/B): ");
+        string answer1 = Console.ReadLine().ToUpper();
+        if (answer1 == "A") score++;
+
+        // Question 2
+        Console.WriteLine("\nQuestion 2: Would you rather...");
+        Console.WriteLine("A) Have the ability to fly");
+        Console.WriteLine("B) Have the ability to become invisible");
+        Console.Write("Your choice (A/B): ");
+        string answer2 = Console.ReadLine().ToUpper();
+        if (answer2 == "A") score++;
+
+        // Question 3
+        Console.WriteLine("\nQuestion 3: Would you rather...");
+        Console.WriteLine("A) Live in a world without music");
+        Console.WriteLine("B) Live in a world without books");
+        Console.Write("Your choice (A/B): ");
+        string answer3 = Console.ReadLine().ToUpper();
+        if (answer3 == "B") score++;
+
+        // Question 4
+        Console.WriteLine("\nQuestion 4: Would you rather...");
+        Console.WriteLine("A) Have a pet dragon");
+        Console.WriteLine("B) Have a pet unicorn");
+        Console.Write("Your choice (A/B): ");
+        string answer4 = Console.ReadLine().ToUpper();
+        if (answer4 == "A") score++;
+
+        // Final remark based on score
+        Console.WriteLine("\nThank you for your answers, " + playerName + "!");
+        if (score == 4)
+        {
+            Console.WriteLine("Wow! You are an adventurous spirit who loves excitement and fantasy!");
+        }
+        else if (score == 3)
+        {
+            Console.WriteLine("Great choices! You have a good balance of adventure and creativity.");
+        }
+        else if (score == 2)
+        {
+            Console.WriteLine("Interesting! You seem to enjoy a mix of practicality and imagination.");
+        }
+        else
+        {
+            Console.WriteLine("You are quite the realist! You appreciate the simpler things in life.");
+        }
+
+        Console.WriteLine("Thanks for playing!");
+    }
+}
